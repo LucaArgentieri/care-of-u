@@ -1,0 +1,54 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Lato', sans-serif;
+}
+
+.orange {
+    color: #E2824F;
+}
+
+.green {
+    color: #ACCBA1;
+}
+
+.white {
+    color: white;
+}
+
+.btn_cta {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 25px; 
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2), 0px 3px 4px rgba(0, 0, 0, 0.12), 0px 2px 4px rgba(0, 0, 0, 0.14);
+    border-radius: 100px;
+    outline: none;
+    border: none;
+    background: #E2824F;   
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: 'Lato', sans-serif;
+    letter-spacing: 1.25px;
+    cursor: pointer;
+
+    &:hover {
+        background: darken($color: #E2824F, $amount: 5)   
+    }
+}
+
+
