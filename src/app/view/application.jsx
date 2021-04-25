@@ -1,10 +1,10 @@
 import React from 'react'
-import SideBar from '../components/sideBar'
+import DashboardSidebar from '../components/dashboard_sidebar'
 
 export default function Application() {
     return (
         <>
-            <SideBar />
+            <DashboardSidebar />
         </>
     )
 }

@@ -1,7 +1,7 @@
 import React from 'react'
 import '../style/sideBar.scss'
 
-export default function SideBar() {
+export default function DashboardSidebar() {
     return (
         <div className="sidebar">
             <h1>Sidebar</h1>

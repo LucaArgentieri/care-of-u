@@ -45,6 +45,7 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Lato', sans-serif;
     letter-spacing: 1.25px;
     cursor: pointer;
+    z-index: 10;
 
     &:hover {
         background: darken($color: #E2824F, $amount: 5)   
