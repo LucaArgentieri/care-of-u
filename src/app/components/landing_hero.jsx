@@ -2,6 +2,7 @@ import React from 'react'
 import '../style/landing_hero.scss'
 import OrangeShape from '../assets/orange-shape.svg'
 import GreenShape from '../assets/green-shape.svg'
+import {Link} from 'react-router-dom'
 
 export default function LandingHero() {
     return (
@@ -10,7 +11,7 @@ export default function LandingHero() {
             <img className="orange_shape" src={OrangeShape} alt=""/>
             <img className="green_shape" src={GreenShape} alt=""/>
         
-            <button className="btn_cta white">Register</button>
+            <Link to="/signup"><button className="btn_cta white">Sign Up</button></Link>
         </div>
 
 
