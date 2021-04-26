@@ -1,18 +1,20 @@
 import React, { useCallback, useContext } from "react";
 import { withRouter, Redirect } from "react-router";
 import app from "../firebase/firebase";
-import {AuthContext} from '../firebase/auth'
+import { AuthContext } from "../firebase/auth";
+import LoginSignupGoogleBtn from "../components/login/login_signup_googlebtn";
+import "../style/login-register/login-register.scss";
 
 const Login = ({ history }) => {
   const handleLogin = useCallback(
-    async event => {
+    async (event) => {
       event.preventDefault();
       const { email, password } = event.target.elements;
       try {
         await app
           .auth()
           .signInWithEmailAndPassword(email.value, password.value);
-        history.push("/");
+        history.push("/application");
       } catch (error) {
         alert(error);
       }
@@ -23,23 +25,34 @@ const Login = ({ history }) => {
   const { currentUser } = useContext(AuthContext);
 
   if (currentUser) {
-    return <Redirect to="/" />;
+    return <Redirect to="/application" />;
   }
 
   return (
-    <div>
-      <h1>Log in</h1>
-      <form onSubmit={handleLogin}>
-        <label>
-          Email
+    <div className="login_container">
+      <div className="flex flex_center">
+        <h1 className="orange fs-72">Ü</h1>
+      </div>
+      <div className="title flex flex_center">
+        <h1 className="green fs-72">Login</h1>
+      </div>
+
+      <div className="form_container flex flex_center flex_column">
+        <LoginSignupGoogleBtn title="Login" />
+
+        <p className="divider">Or</p>
+
+        <form
+          onSubmit={handleLogin}
+          className="form flex flex_center flex_column"
+        >
           <input name="email" type="email" placeholder="Email" />
-        </label>
-        <label>
-          Password
+
           <input name="password" type="password" placeholder="Password" />
-        </label>
-        <button type="submit">Log in</button>
-      </form>
+
+          <button type="submit">Log in</button>
+        </form>
+      </div>
     </div>
   );
 };

@@ -1,7 +1,9 @@
-import React, { useCallback } from "react";
-import { withRouter } from "react-router";
+import React, { useCallback, useContext } from "react";
+import { withRouter, Redirect } from "react-router";
 import {Link} from 'react-router-dom'
 import app from "../firebase/firebase";
+import {AuthContext} from '../firebase/auth'
+import LoginSignupGoogleBtn from '../components/login/login_signup_googlebtn'
 
 const SignUp = ({ history }) => {
   const handleSignUp = useCallback(async event => {
@@ -11,15 +13,25 @@ const SignUp = ({ history }) => {
       await app
         .auth()
         .createUserWithEmailAndPassword(email.value, password.value);
-      history.push("/");
+      history.push("/application");
     } catch (error) {
       alert(error);
     }
   }, [history]);
 
+  const { currentUser } = useContext(AuthContext);
+
+  if (currentUser) {
+    return <Redirect to="/application" />;
+  }
+
   return (
     <div>
       <h1>Sign up</h1>
+      <LoginSignupGoogleBtn title="Sign Up"/>
+
+    
+
       <form onSubmit={handleSignUp}>
         <label>
           Email

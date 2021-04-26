@@ -1,55 +1,113 @@
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-    overflow-x: hidden;
+  overflow-x: hidden;
 }
 
 img {
-    max-width: 100%;
-    height: auto;
+  max-width: 100%;
+  height: auto;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Lato', sans-serif;
+//Typo
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Lato", sans-serif;
 }
 
+.fs-24 {
+  font-size: 24px;
+}
+
+.fs-64 {
+  font-size: 64px;
+}
+
+.fs-72 {
+  font-size: 72px;
+}
+
+//Positioning
+.full-height {
+  height: 100vh;
+}
+
+//Flex
+.flex {
+  display: flex;
+
+  &_center {
+    justify-content: center;
+    align-items: center;
+  }
+
+  &_column {
+    flex-direction: column;
+  }
+}
+
+//Grid
+.grid {
+  display: grid;
+}
+
+// Colors
 .orange {
-    color: #E2824F;
+  color: #e2824f;
 }
 
 .green {
-    color: #ACCBA1;
+  color: #accba1;
 }
 
 .white {
-    color: white;
+  color: white;
 }
 
+//Buttons
 .btn_cta {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 15px 25px; 
-    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2), 0px 3px 4px rgba(0, 0, 0, 0.12), 0px 2px 4px rgba(0, 0, 0, 0.14);
-    border-radius: 100px;
-    outline: none;
-    border: none;
-    background: #E2824F;   
-    text-transform: uppercase;
-    font-weight: bold;
-    font-family: 'Lato', sans-serif;
-    letter-spacing: 1.25px;
-    cursor: pointer;
-    z-index: 10;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 25px;
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2), 0px 3px 4px rgba(0, 0, 0, 0.12),
+    0px 2px 4px rgba(0, 0, 0, 0.14);
+  border-radius: 100px;
+  outline: none;
+  border: none;
+  background: #e2824f;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: "Lato", sans-serif;
+  letter-spacing: 1.25px;
+  cursor: pointer;
+  z-index: 10;
 
-    &:hover {
-        background: darken($color: #E2824F, $amount: 5)   
-    }
+  &:hover {
+    background: darken($color: #e2824f, $amount: 5);
+  }
 }
 
-
+.btn_google {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 15px 25px;
+  cursor: pointer;
+  border: 2px solid #dddddd;
+  background-color: transparent;
+  font-weight: 500;
+}

@@ -1,0 +1,23 @@
+.login_container {
+  h1 {
+    padding-top: 25px;
+    padding-bottom: 10px;
+  }
+
+  .title {
+    padding-bottom: 25px;
+  }
+
+  .form_container {
+    .divider {
+      padding-top: 25px;
+      padding-bottom: 10px;
+    }
+    .form {
+      input {
+        margin-top: 25px;
+        margin-bottom: 10px;
+      }
+    }
+  }
+}

@@ -13,5 +13,15 @@ const app = firebase.initializeApp({
     appId: process.env.REACT_APP_APP_ID
 })
 
+//Google login
+export const auth = firebase.auth();
+const googleProvider = new firebase.auth.GoogleAuthProvider()
+export const signInWithGoogle = () => {
+    auth.signInWithPopup(googleProvider).then((res) => {
+    }).catch((error) => {
+        console.log(error.message)
+    })
+}
+
 
 export default app

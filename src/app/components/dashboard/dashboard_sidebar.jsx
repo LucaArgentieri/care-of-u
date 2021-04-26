@@ -1,6 +1,6 @@
 import React from 'react'
-import '../style/sideBar.scss'
-import app from '../firebase/firebase'
+import '../../style/dashboard/sideBar.scss'
+import app from '../../firebase/firebase'
 
 
 export default function DashboardSidebar() {
