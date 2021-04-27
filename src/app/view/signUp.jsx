@@ -1,23 +1,29 @@
 import React, { useCallback, useContext } from "react";
 import { withRouter, Redirect } from "react-router";
-import {Link} from 'react-router-dom'
+import { Link } from "react-router-dom";
 import app from "../firebase/firebase";
-import {AuthContext} from '../firebase/auth'
-import LoginSignupGoogleBtn from '../components/login/login_signup_googlebtn'
+import { AuthContext } from "../firebase/auth";
+import LoginSignupGoogleBtn from "../components/login/login_signup_googlebtn";
+import "../style/login-register/login-register.scss";
+import PasswordLogo from "../assets/password.svg";
+import EmailLogo from "../assets/email.svg";
 
 const SignUp = ({ history }) => {
-  const handleSignUp = useCallback(async event => {
-    event.preventDefault();
-    const { email, password } = event.target.elements;
-    try {
-      await app
-        .auth()
-        .createUserWithEmailAndPassword(email.value, password.value);
-      history.push("/application");
-    } catch (error) {
-      alert(error);
-    }
-  }, [history]);
+  const handleSignUp = useCallback(
+    async (event) => {
+      event.preventDefault();
+      const { email, password } = event.target.elements;
+      try {
+        await app
+          .auth()
+          .createUserWithEmailAndPassword(email.value, password.value);
+        history.push("/application");
+      } catch (error) {
+        alert(error);
+      }
+    },
+    [history]
+  );
 
   const { currentUser } = useContext(AuthContext);
 
@@ -26,25 +32,46 @@ const SignUp = ({ history }) => {
   }
 
   return (
-    <div>
-      <h1>Sign up</h1>
-      <LoginSignupGoogleBtn title="Sign Up"/>
+    <div className="login_container flex flex_center flex_column full-height">
+      <div className="flex flex_center">
+        <Link to="/">
+          <h1 className="orange fs-72">Ü</h1>{" "}
+        </Link>
+      </div>
+      <div className="title flex flex_center">
+        <h1 className="green fs-72">Sign Up</h1>
+      </div>
 
-    
+      <div className="form_container flex flex_center flex_column">
+        <LoginSignupGoogleBtn title="Sign Up" />
 
-      <form onSubmit={handleSignUp}>
-        <label>
-          Email
-          <input name="email" type="email" placeholder="Email" />
-        </label>
-        <label>
-          Password
-          <input name="password" type="password" placeholder="Password" />
-        </label>
-        <button type="submit">Sign Up</button>
-      </form>
+        <div className="divider line one-line">OR</div>
 
-      <p>Do you already have an account? <Link to="/login">Login here</Link></p>
+        <form
+          onSubmit={handleSignUp}
+          className="form flex flex_center flex_column"
+        >
+          <div className="input_container">
+            <input name="email" type="email" placeholder="Email" />
+            <img src={EmailLogo} alt="" />
+          </div>
+
+          <div className="input_container">
+            <input name="password" type="password" placeholder="Password" />
+            <img src={PasswordLogo} alt="" />
+          </div>
+
+          <button type="submit" className="fs-18">
+            Sign Up
+          </button>
+        </form>
+        <p>
+          Do you already have an account?{" "}
+          <Link to="/login" className="green">
+            Login here
+          </Link>
+        </p>
+      </div>
     </div>
   );
 };

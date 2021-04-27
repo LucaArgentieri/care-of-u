@@ -51,9 +51,15 @@
 
 @media (max-width: 900px) {
   .landing_preview {
+    padding-right: 25px;
+    padding-left: 25px;
     h2 {
       padding: 0px;
       text-align: center;
+    }
+    p {
+      padding-top: 25px;
+      padding-bottom: 25px;
     }
     .flex {
       flex-direction: column;
@@ -61,6 +67,12 @@
     }
     .flex_regular {
       padding: 10px;
+    }
+    .orange_shape {
+      right: 0px;
+    }
+    .landing_preview_shape_container .orange_shape_down {
+      right: 0px;
     }
   }
 }

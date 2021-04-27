@@ -37,10 +37,6 @@
   text-align: center;
   height: 100vh;
 
-  h1 {
-    font-size: 48px;
-  }
-
   .green {
     padding-bottom: 50px;
   }
@@ -63,5 +59,31 @@
     &_down {
       opacity: 0.1;
     }
+  }
+}
+
+@media (max-width: 900px) {
+  .shape_container {
+    button {
+      right: 25px;
+      top: 25px;
+    }
+
+    .green_shape {
+      display: none;
+    }
+
+    .orange_shape {
+      right: 0px;
+      &_down {
+        display: none;
+      }
+    }
+  }
+
+  .text_container {
+    text-align: left;
+    padding-left: 25px;
+    padding-right: 25px;
   }
 }

@@ -2,6 +2,8 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
 }
 
 html {
@@ -17,6 +19,23 @@ img {
   height: auto;
 }
 
+//Scrollbar
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #accba1;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #e2824f;
+}
+
 //Typo
 h1,
 h2,
@@ -24,11 +43,27 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Lato", sans-serif;
+  font-weight: bold;
+}
+
+p {
+  font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+}
+
+.fs-18 {
+  font-size: 18px;
 }
 
 .fs-24 {
   font-size: 24px;
+}
+
+.fs-48 {
+  font-size: 48px;
 }
 
 .fs-64 {
@@ -76,6 +111,14 @@ h6 {
   color: white;
 }
 
+.grey {
+  color: #e0e0e0;
+}
+
+.bg-orange {
+  background-color: #e2824f;
+}
+
 //Buttons
 .btn_cta {
   display: flex;
@@ -85,16 +128,17 @@ h6 {
   padding: 15px 25px;
   box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2), 0px 3px 4px rgba(0, 0, 0, 0.12),
     0px 2px 4px rgba(0, 0, 0, 0.14);
-  border-radius: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   outline: none;
   border: none;
-  background: #e2824f;
-  text-transform: uppercase;
-  font-weight: bold;
-  font-family: "Lato", sans-serif;
-  letter-spacing: 1.25px;
+  background-color: #e2824f;
+  color: white;
+  border-radius: 4px;
   cursor: pointer;
-  z-index: 10;
+  z-index: 999;
 
   &:hover {
     background: darken($color: #e2824f, $amount: 5);
@@ -105,9 +149,21 @@ h6 {
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 15px 25px;
+  padding: 15px 50px;
   cursor: pointer;
   border: 2px solid #dddddd;
   background-color: transparent;
-  font-weight: 500;
+  border-radius: 34px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: hsla(0, 0%, 0%, 0.5);
+
+  &:hover {
+    border-color: #e2824f;
+  }
+
+  img {
+    height: 25px;
+    padding-right: 25px;
+  }
 }

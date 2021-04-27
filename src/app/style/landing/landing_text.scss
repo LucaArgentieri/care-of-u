@@ -1,6 +1,20 @@
 .landing_text {
+  height: 100vh;
   h1 {
     padding-bottom: 50px;
   }
-  padding: 0px 50px 0px 50px;
+  padding: 0px 150px 0px 150px;
+}
+
+@media (max-width: 900px) {
+  .landing_text {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 0px;
+    padding-right: 25px;
+    padding-left: 25px;
+    h1 {
+      font-size: 64px;
+    }
+  }
 }
