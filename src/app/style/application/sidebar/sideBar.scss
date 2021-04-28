@@ -1,0 +1,70 @@
+.sidebar {
+  min-width: 15%;
+  height: 100vh;
+  border-right: 1px solid rgba(0, 0, 0, 0.12);
+  display: flex;
+  flex-direction: column;
+
+  h1 {
+    padding-top: 25px;
+  }
+
+  h1,
+  p,
+  .signOut_container {
+    padding-left: 16px;
+  }
+
+  .main_list,
+  .options_list {
+    padding-bottom: 50px;
+  }
+
+  .MuiTypography-displayBlock {
+    color: #accba1;
+  }
+
+  .MuiSvgIcon-root {
+    fill: #accba1;
+  }
+
+  .Mui-selected {
+    background-color: transparent;
+    color: #e2824f;
+    font-weight: 500;
+  }
+
+  .MuiListItem-root.Mui-selected {
+    background-color: #e2824f;
+
+    .MuiTypography-displayBlock {
+      color: white;
+    }
+
+    .MuiSvgIcon-root {
+      fill: white;
+    }
+  }
+
+  .MuiListItem-button:hover {
+    background-color: #accba1;
+
+    .MuiTypography-displayBlock {
+      color: white;
+    }
+
+    .MuiSvgIcon-root {
+      fill: white;
+    }
+  }
+
+  .MuiListItem-root.Mui-selected:hover {
+    background-color: #e2824f;
+  }
+}
+
+@media (max-width: 1150px) {
+  .sidebar {
+    display: none;
+  }
+}
