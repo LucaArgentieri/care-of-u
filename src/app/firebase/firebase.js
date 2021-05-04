@@ -1,6 +1,7 @@
-import firebase from 'firebase/app'
-import 'firebase/firestore'
-import 'firebase/auth'
+import firebase from 'firebase/app';
+import 'firebase/firestore';
+import 'firebase/auth';
+import 'firebase/analytics';
 
 
 const app = firebase.initializeApp({
@@ -13,9 +14,16 @@ const app = firebase.initializeApp({
     appId: process.env.REACT_APP_APP_ID
 })
 
+
+export const firebaseRef = firebase;
+export const auth = app.auth();
+export const firestore = app.firestore();
+export const analytics = app.analytics();
+
+
 //Google login
-export const auth = firebase.auth();
 const googleProvider = new firebase.auth.GoogleAuthProvider()
+
 export const signInWithGoogle = () => {
     auth.signInWithPopup(googleProvider).then((res) => {
     }).catch((error) => {

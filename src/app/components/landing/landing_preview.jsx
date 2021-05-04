@@ -6,7 +6,9 @@ import GreenShape from "../../assets/green-shape.svg";
 export default function LandingPreview({ right, green, title, text, id }) {
   return (
     <div id={id} className={`full-height landing_preview`}>
-      <h2 className={`fs-64 ${green ? "green" : "orange"}`}>{title}</h2>
+      <h2 className={`fs-64 ${green ? "c-secondary" : "c-primary"}`}>
+        {title}
+      </h2>
 
       <div className={`flex ${right ? "flex_regular" : "flex_reverse"}`}>
         <p className="fs-24">{text}</p>

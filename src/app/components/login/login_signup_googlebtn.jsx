@@ -18,7 +18,7 @@ export default function LoginSignupGoogleBtn({ title }) {
   }
 
   return (
-    <button className="btn_google fs-18" onClick={signInWithGoogle}>
+    <button className="btn_google fs-14" onClick={signInWithGoogle}>
       <img src={GoogleLogo} alt="" />
       <p>{title} with Google</p>
     </button>

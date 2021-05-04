@@ -37,7 +37,7 @@
   text-align: center;
   height: 100vh;
 
-  .green {
+  .c-secondary {
     padding-bottom: 50px;
   }
 }
@@ -85,5 +85,9 @@
     text-align: left;
     padding-left: 25px;
     padding-right: 25px;
+
+    h1 {
+      font-size: 48px;
+    }
   }
 }

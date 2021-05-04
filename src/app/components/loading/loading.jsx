@@ -11,7 +11,7 @@ export default function Loading() {
           <img src={GreenShape} alt="" />
           <img src={OrangeShape} alt="" />
         </div>
-        <h1 className="orange fs-48">Loading...</h1>
+        <h1 className="c-primary fs-48">Loading...</h1>
       </div>
     </div>
   );

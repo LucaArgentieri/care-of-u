@@ -1,0 +1,48 @@
+//Flex
+.flex {
+  display: flex;
+
+  &_center {
+    justify-content: center;
+    align-items: center;
+  }
+
+  &_column {
+    flex-direction: column;
+  }
+
+  &_wrap {
+    flex-wrap: wrap;
+  }
+}
+
+//Grid
+.grid {
+  display: grid;
+
+  &_application {
+    grid-template-columns: 2fr 10fr;
+  }
+
+  &_2columns {
+    grid-template-columns: 4fr 8fr;
+  }
+
+  &_3columns {
+    grid-template-columns: 3fr 3fr 6fr;
+  }
+}
+
+//Positioning
+.full-height {
+  height: 100vh;
+}
+
+.half-height {
+  height: 50vh;
+}
+
+//display none
+.display-none {
+  display: none;
+}

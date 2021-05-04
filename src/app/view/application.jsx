@@ -7,7 +7,7 @@ import "../style/application/application.scss";
 
 export default function Application() {
   return (
-    <div className="flex">
+    <div className="grid grid_application">
       <SideBar />
       <div className="application_container full-height flex flex_center">
         <div className="application_container_shapes">

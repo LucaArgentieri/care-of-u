@@ -1,0 +1,36 @@
+.message_container {
+  margin-top: 60px;
+  margin-bottom: 60px;
+  .message {
+    padding-right: 15px;
+    padding-left: 15px;
+    display: flex;
+    align-items: center;
+
+    img {
+      height: 40px;
+      border-radius: 50%;
+      margin: 2px 5px;
+    }
+  }
+
+  .sent {
+    flex-direction: row-reverse;
+
+    p {
+      align-self: flex-end;
+      background-color: #007f5b;
+      padding: 10px 25px;
+      border-radius: 4px;
+      box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2),
+        0px 3px 4px rgba(0, 0, 0, 0.12);
+    }
+  }
+
+  .received p {
+    background-color: #e2824f;
+    padding: 10px 25px;
+    border-radius: 4px;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2), 0px 3px 4px rgba(0, 0, 0, 0.12);
+  }
+}

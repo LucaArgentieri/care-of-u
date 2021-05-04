@@ -1,11 +1,13 @@
 import React from "react";
 import SideBar from "../sidebar/sidebar";
+import ContactsBar from "./contactsBar";
+import "../../../style/application/chat/chat.scss";
 
 export default function Chat() {
   return (
-    <div className="flex">
+    <div className="chat_container full-height">
       <SideBar index={1} />
-      <h1>Chat</h1>
+      <ContactsBar index={1} />
     </div>
   );
 }

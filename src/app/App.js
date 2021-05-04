@@ -17,6 +17,7 @@ import PrivateRoute from './firebase/privateRoute'
 import Landing from './view/landing'
 import SignUp from './view/signUp'
 import Login from './view/login'
+import RetrievePassword from './view/retrieve_password'
 import Error from './view/error'
 
 
@@ -41,6 +42,8 @@ function App() {
           <Route exact path="/" children={Landing} />
           <Route exact path="/login" children={Login} />
           <Route exact path="/signup" children={SignUp} />
+          <Route exact path="/retrieve-password" children={RetrievePassword} />
+
 
           <PrivateRoute component={Application} path="/application" exact />
           <PrivateRoute component={Dashboard} path="/application/dashboard" />

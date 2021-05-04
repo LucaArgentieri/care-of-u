@@ -1,0 +1,28 @@
+//Typo
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
+}
+
+a {
+  text-decoration: none;
+}
+
+$fontsizes: (
+  14: 14px,
+  18: 18px,
+  24: 24px,
+  48: 48px,
+  64: 64px,
+  72: 72px,
+);
+
+@each $key in map-keys($fontsizes) {
+  .fs-#{$key} {
+    font-size: map-get($fontsizes, $key);
+  }
+}

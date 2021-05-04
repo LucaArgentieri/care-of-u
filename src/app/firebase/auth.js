@@ -16,6 +16,7 @@ export const Auth = ({ children }) => {
         });
     }, []);
 
+
     if (pending) {
         return <Loading />
     }

@@ -22,9 +22,9 @@ export default function DashboardSidebar({ index }) {
   return (
     <div className="sidebar">
       <Link to="/">
-        <h1 className="orange fs-64">Ü</h1>
+        <h1 className="c-primary fs-64">Ü</h1>
       </Link>
-      <p className="orange fs-18">{currentUser.displayName}</p>
+      <p className="c-primary fs-18">{currentUser.displayName}</p>
       <div className="main_list">
         <List component="nav">
           <Link to="/application/dashboard">
@@ -99,7 +99,7 @@ export default function DashboardSidebar({ index }) {
       </div>
 
       <div className="signOut_container">
-        <button className="btn_cta fs-18" onClick={() => app.auth().signOut()}>
+        <button className="btn_cta fs-14" onClick={() => app.auth().signOut()}>
           Sign out
         </button>
       </div>

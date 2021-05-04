@@ -1,9 +1,11 @@
 .sidebar {
-  min-width: 15%;
-  height: 100vh;
   border-right: 1px solid rgba(0, 0, 0, 0.12);
   display: flex;
   flex-direction: column;
+
+  span {
+    font-family: "Lato", sans-serif;
+  }
 
   h1 {
     padding-top: 25px;
@@ -13,6 +15,11 @@
   p,
   .signOut_container {
     padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .btn_cta {
+    width: 100%;
   }
 
   .main_list,
@@ -21,11 +28,11 @@
   }
 
   .MuiTypography-displayBlock {
-    color: #accba1;
+    color: #007f5b;
   }
 
   .MuiSvgIcon-root {
-    fill: #accba1;
+    fill: #007f5b;
   }
 
   .Mui-selected {
@@ -39,6 +46,7 @@
 
     .MuiTypography-displayBlock {
       color: white;
+      font-weight: bold;
     }
 
     .MuiSvgIcon-root {
@@ -47,7 +55,7 @@
   }
 
   .MuiListItem-button:hover {
-    background-color: #accba1;
+    background-color: #007f5b;
 
     .MuiTypography-displayBlock {
       color: white;

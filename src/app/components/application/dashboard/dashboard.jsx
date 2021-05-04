@@ -22,7 +22,7 @@ import VerticalBar from "./charts/verticalBar";
 
 export default function SimpleCard() {
   return (
-    <div className="flex">
+    <div className="grid grid_application">
       <SideBar index={0} />
 
       <div className="dashboard_container flex flex_wrap">

@@ -1,0 +1,28 @@
+//Colors
+//second green #accba1
+$primary: #e2824f;
+$secondary: #007f5b;
+$white: #fafafa;
+$grey: #e0e0e0;
+
+$colors: (
+  primary: #e2824f,
+  primaryOpacity: #f5ddd0,
+  secondary: #007f5b,
+  white: #fafafa,
+  grey: #e0e0e0,
+);
+
+@each $key in map-keys($colors) {
+  .c-#{$key} {
+    color: map-get($colors, $key);
+  }
+
+  .b-#{$key} {
+    border-color: map-get($colors, $key);
+  }
+
+  .bg-#{$key} {
+    background-color: map-get($colors, $key);
+  }
+}
