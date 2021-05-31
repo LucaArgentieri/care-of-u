@@ -5,7 +5,66 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: bold;
+  font-family: "Spectral", serif;
+}
+
+.spectral {
+  font-family: "Spectral", serif;
+}
+
+.lato {
+  font-family: "Lato", sans-serif;
+}
+
+.extralight {
+  font-weight: 200;
+}
+.extralight-italic {
+  font-weight: 200;
+  font-style: italic;
+}
+.light {
+  font-weight: 300;
+}
+.light-italic {
+  font-weight: 300;
+  font-style: italic;
+}
+.regular {
+  font-weight: 400;
+}
+.regular-italic {
+  font-weight: 400;
+  font-style: italic;
+}
+.medium {
+  font-weight: 500;
+}
+.medium-italic {
+  font-weight: 500;
+  font-style: italic;
+}
+.semibold {
+  font-weight: 600;
+  font-style: italic;
+}
+.semibold-italic {
+  font-weight: 600;
+  font-style: italic;
+}
+.bold {
+  font-weight: 700;
+}
+.bold-italic {
+  font-weight: 700;
+  font-style: italic;
+}
+.extrabold {
+  font-weight: 800;
+}
+.extrabold-italic {
+  font-weight: 800;
+  font-style: italic;
 }
 
 a {
@@ -16,9 +75,11 @@ $fontsizes: (
   14: 14px,
   18: 18px,
   24: 24px,
+  36: 36px,
   48: 48px,
   64: 64px,
   72: 72px,
+  96: 96px,
 );
 
 @each $key in map-keys($fontsizes) {

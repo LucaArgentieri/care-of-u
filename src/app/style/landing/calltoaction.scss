@@ -1,2 +1,48 @@
 .cta_container {
+  justify-content: center;
+  align-items: center;
+  padding-top: 100px;
+  padding-bottom: 100px;
+
+  .half-container {
+    flex: 0 0 70%;
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 50px;
+
+    p {
+      padding-bottom: 50px;
+    }
+  }
+
+  .last-container {
+    flex: 0 0 30%;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media (max-width: 900px) {
+  .cta_container {
+    flex-direction: column;
+    height: auto;
+    padding-top: 25px;
+    padding-bottom: 25px;
+
+    .half-container {
+      padding-left: 0px;
+
+      p {
+        font-size: 32px;
+      }
+    }
+
+    .last-container {
+      display: none;
+    }
+  }
 }

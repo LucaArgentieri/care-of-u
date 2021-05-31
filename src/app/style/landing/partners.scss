@@ -1,0 +1,29 @@
+.partners {
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  p {
+    text-align: center;
+    padding-bottom: 50px;
+  }
+  .images_container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+
+    img {
+      padding: 25px;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .partners {
+    height: auto;
+    padding-bottom: 50px;
+    padding-top: 50px;
+  }
+}

@@ -5,7 +5,7 @@ import { firebaseRef, firestore, auth } from "../../../firebase/firebase";
 import "../../../style/application/chat/chatRoom.scss";
 import SendIcon from "@material-ui/icons/Send";
 
-export default function ChatRoom({ index }) {
+export default function ChatRoom({ index, show }) {
   const [chatName, setChatName] = useState(null);
 
   const dummy = useRef();
@@ -51,28 +51,75 @@ export default function ChatRoom({ index }) {
   }, [index]);
 
   return (
-    <div className="chatroom_container bg-primaryOpacity">
-      <div className="chatroom_container_name bg-secondary flex c-white fs-18">
-        {chatName}
-      </div>
-      {messages &&
-        messages.map((msg) => <ChatMessage key={msg.id} message={msg} />)}
-
-      <span ref={dummy}></span>
-
-      <div className="chatroom_container_form bg-primaryOpacity">
-        <form onSubmit={sendMessage}>
-          <input
-            value={formValue}
-            onChange={(e) => setFormValue(e.target.value)}
-            placeholder="Scrivi un messaggio"
+    <>
+      <div className="chatroom_container bg-primaryOpacity">
+        <div className="chatroom_container_name bg-secondary flex c-white fs-18">
+          <img
+            src={
+              "https://clubsports.gcu.edu/wp-content/uploads/Coach-Avator.png"
+            }
           />
+          {chatName}
+        </div>
+        {messages &&
+          messages.map((msg) => <ChatMessage key={msg.id} message={msg} />)}
 
-          <button type="submit" className="bg-secondary" disabled={!formValue}>
-            <SendIcon />
-          </button>
-        </form>
+        <span ref={dummy}></span>
+
+        <div className="chatroom_container_form bg-primaryOpacity">
+          <form onSubmit={sendMessage}>
+            <input
+              value={formValue}
+              onChange={(e) => setFormValue(e.target.value)}
+              placeholder="Scrivi un messaggio"
+            />
+
+            <button
+              type="submit"
+              className="bg-secondary"
+              disabled={!formValue}
+            >
+              <SendIcon />
+            </button>
+          </form>
+        </div>
       </div>
-    </div>
+
+      <div
+        className="chatroom_container_mobile bg-primaryOpacity"
+        className={!show ? "display-none" : "chatroom_container"}
+      >
+        <div className="chatroom_container_name bg-secondary flex c-white fs-18">
+          <img
+            src={
+              "https://clubsports.gcu.edu/wp-content/uploads/Coach-Avator.png"
+            }
+          />
+          {chatName}
+        </div>
+        {messages &&
+          messages.map((msg) => <ChatMessage key={msg.id} message={msg} />)}
+
+        <span ref={dummy}></span>
+
+        <div className="chatroom_container_form bg-primaryOpacity">
+          <form onSubmit={sendMessage}>
+            <input
+              value={formValue}
+              onChange={(e) => setFormValue(e.target.value)}
+              placeholder="Scrivi un messaggio"
+            />
+
+            <button
+              type="submit"
+              className="bg-secondary"
+              disabled={!formValue}
+            >
+              <SendIcon />
+            </button>
+          </form>
+        </div>
+      </div>
+    </>
   );
 }

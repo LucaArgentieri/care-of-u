@@ -1,12 +1,49 @@
+.dashboard {
+  display: grid;
+  grid-template-columns: 2fr 10fr;
+}
 .dashboard_container {
   padding: 25px;
+
+  p {
+    padding-bottom: 25px;
+  }
+
   .card {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin: 25px;
-    width: 400px;
-    height: 500px;
+    margin-right: 25px;
+    margin-bottom: 25px;
+    padding: 50px;
+  }
+}
+
+@media (max-width: 900px) {
+  .dashboard {
+    margin-bottom: 50px;
+    display: block;
+
+    .dashboard_container {
+      padding: 0px;
+
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 50px;
+      }
+
+      p {
+        padding-left: 5%;
+      }
+
+      .card {
+        padding: 0px;
+        margin: 10px;
+      }
+    }
   }
 }

@@ -13,7 +13,6 @@
   align-items: center;
   outline: none;
   border: none;
-  background-color: $primary;
   color: $white;
   border-radius: 4px;
   cursor: pointer;
@@ -22,7 +21,7 @@
   z-index: 999;
 
   &:hover {
-    background: darken($color: $primary, $amount: 5);
+    opacity: 0.8;
   }
 }
 

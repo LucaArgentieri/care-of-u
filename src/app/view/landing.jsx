@@ -12,7 +12,7 @@ export default function Landing() {
       <LandingHero />
       <LandingText
         orange={false}
-        title={"Take care of the important people"}
+        title={"Prenditi cura delle persone importanti"}
         text={
           "Care of u è un servizio nato dallesigenza di voler facilitare la comunicazione tra ospedale e famigliari oppure amici del paziente. Stiamo lavorando per rendere questo servizio sempre più scalabile ed utilizzabile anche come servizio di comunicazione per vaccini, visite ed altre operazioni."
         }

@@ -1,5 +1,5 @@
 .landing_text {
-  height: 80vh;
+  width: 50%;
   &_container {
     padding-top: 100px;
     padding-bottom: 100px;
@@ -12,14 +12,13 @@
 
 @media (max-width: 900px) {
   .landing_text {
-    height: auto;
-    margin-top: 50px;
-    padding-bottom: 50px;
     padding: 0px;
     padding-right: 25px;
     padding-left: 25px;
+    width: 100%;
+    height: auto;
     h1 {
-      font-size: 48px;
+      font-size: 36px;
     }
   }
 }

@@ -1,5 +1,6 @@
 import React from "react";
 import "../../../style/application/dashboard/dashboard.scss";
+import MobileMenu from "../mobileMenu/mobileMenu";
 
 import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
@@ -22,88 +23,92 @@ import VerticalBar from "./charts/verticalBar";
 
 export default function SimpleCard() {
   return (
-    <div className="grid grid_application">
+    <div className="dashboard">
       <SideBar index={0} />
 
-      <div className="dashboard_container flex flex_wrap">
-        <Card className="card">
-          <CardContent>
-            <ClickEvents />
-          </CardContent>
-        </Card>
-        <Card className="card">
-          <h1 className="fs-24">Doughnut</h1>
+      <div className="dashboard_container flex flex_wrap flex_column">
+        <p className="c-secondary fs-48 lato medium">Dashboard</p>
+        <div className="container flex flex_wrap">
+          <Card className="card">
+            <CardContent>
+              <ClickEvents />
+            </CardContent>
+          </Card>
+          <Card className="card">
+            <h1 className="fs-24">Doughnut</h1>
 
-          <CardContent>
-            <DoughnutChart />
-          </CardContent>
-        </Card>
-        <Card className="card">
-          <CardContent>
-            <Crazy />
-          </CardContent>
-        </Card>
-        <Card className="card">
-          <CardContent>
-            <Dynamic />
-          </CardContent>
-        </Card>
-        <Card className="card">
-          <CardContent>
-            <GroupedBar />
-          </CardContent>
-        </Card>
-        <Card className="card">
-          <CardContent>
-            <HorizontalBar />
-          </CardContent>
-        </Card>
-        <Card className="card">
-          <CardContent>
-            <Line />
-          </CardContent>
-        </Card>
-        <Card className="card">
-          <CardContent>
-            <MultiAxes />
-          </CardContent>
-        </Card>
-        <Card className="card">
-          <CardContent>
-            <MultiType />
-          </CardContent>
-        </Card>
-        <Card className="card">
-          <CardContent>
-            <Pie />
-          </CardContent>
-        </Card>
-        <Card className="card">
-          <CardContent>
-            <Polar />
-          </CardContent>
-        </Card>
-        <Card className="card">
-          <CardContent>
-            <Radar />
-          </CardContent>
-        </Card>
-        <Card className="card">
-          <CardContent>
-            <Scatter />
-          </CardContent>
-        </Card>
-        <Card className="card">
-          <CardContent>
-            <StackedBar />
-          </CardContent>
-        </Card>
-        <Card className="card">
-          <CardContent>
-            <VerticalBar />
-          </CardContent>
-        </Card>
+            <CardContent>
+              <DoughnutChart />
+            </CardContent>
+          </Card>
+          <Card className="card">
+            <CardContent>
+              <Crazy />
+            </CardContent>
+          </Card>
+          <Card className="card">
+            <CardContent>
+              <Dynamic />
+            </CardContent>
+          </Card>
+          <Card className="card">
+            <CardContent>
+              <GroupedBar />
+            </CardContent>
+          </Card>
+          <Card className="card">
+            <CardContent>
+              <HorizontalBar />
+            </CardContent>
+          </Card>
+          <Card className="card">
+            <CardContent>
+              <Line />
+            </CardContent>
+          </Card>
+          <Card className="card">
+            <CardContent>
+              <MultiAxes />
+            </CardContent>
+          </Card>
+          <Card className="card">
+            <CardContent>
+              <MultiType />
+            </CardContent>
+          </Card>
+          <Card className="card">
+            <CardContent>
+              <Pie />
+            </CardContent>
+          </Card>
+          <Card className="card">
+            <CardContent>
+              <Polar />
+            </CardContent>
+          </Card>
+          <Card className="card">
+            <CardContent>
+              <Radar />
+            </CardContent>
+          </Card>
+          <Card className="card">
+            <CardContent>
+              <Scatter />
+            </CardContent>
+          </Card>
+          <Card className="card">
+            <CardContent>
+              <StackedBar />
+            </CardContent>
+          </Card>
+          <Card className="card">
+            <CardContent>
+              <VerticalBar />
+            </CardContent>
+          </Card>
+        </div>
       </div>
+      <MobileMenu status={"dashboard"} />
     </div>
   );
 }

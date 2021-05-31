@@ -5,7 +5,6 @@ import DashboardIcon from "@material-ui/icons/Dashboard";
 import ForumIcon from "@material-ui/icons/Forum";
 import AssessmentIcon from "@material-ui/icons/Assessment";
 import SettingsIcon from "@material-ui/icons/Settings";
-import NotificationsActiveIcon from "@material-ui/icons/NotificationsActive";
 import { Link } from "react-router-dom";
 import "../../../style/application/sidebar/sideBar.scss";
 import { AuthContext } from "../../../firebase/auth";
@@ -83,7 +82,7 @@ export default function DashboardSidebar({ index }) {
             </ListItem>
           </Link>
 
-          <Link to="/application/notifications">
+          {/* <Link to="/application/notifications">
             <ListItem
               button
               selected={selectedIndex === 4}
@@ -94,12 +93,15 @@ export default function DashboardSidebar({ index }) {
               </ListItemIcon>
               <ListItemText primary="Notifiche" />
             </ListItem>
-          </Link>
+          </Link> */}
         </List>
       </div>
 
       <div className="signOut_container">
-        <button className="btn_cta fs-14" onClick={() => app.auth().signOut()}>
+        <button
+          className="btn_cta bg-primary fs-14"
+          onClick={() => app.auth().signOut()}
+        >
           Sign out
         </button>
       </div>

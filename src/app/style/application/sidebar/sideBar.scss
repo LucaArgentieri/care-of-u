@@ -2,6 +2,8 @@
   border-right: 1px solid rgba(0, 0, 0, 0.12);
   display: flex;
   flex-direction: column;
+  height: 100vh;
+  position: relative;
 
   span {
     font-family: "Lato", sans-serif;
@@ -16,6 +18,14 @@
   .signOut_container {
     padding-left: 16px;
     padding-right: 16px;
+  }
+
+  .signOut_container {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    margin-bottom: 25px;
+    width: 100%;
   }
 
   .btn_cta {

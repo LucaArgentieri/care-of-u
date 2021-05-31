@@ -1,5 +1,10 @@
-.chat_container {
-  display: flex;
+@media (min-width: 900px) {
+  .chat_container {
+    display: grid;
+    grid-template-columns: 2fr 3fr 7fr;
+  }
 }
-// @media (max-width: 1150px) {
-// }
+
+p {
+  padding-left: 5%;
+}

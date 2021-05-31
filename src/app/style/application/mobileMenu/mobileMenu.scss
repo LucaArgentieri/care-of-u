@@ -1,0 +1,31 @@
+@media (min-width: 900px) {
+  .mobileMenu {
+    display: none;
+  }
+}
+
+.mobileMenu {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: black;
+  z-index: 99;
+  transform: translateZ(0);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 3px rgba(0, 0, 0, 0.24);
+
+  .container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  a {
+    color: white;
+  }
+  .active {
+    fill: #2d936c;
+  }
+}

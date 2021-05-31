@@ -6,3 +6,25 @@
     height: 200px;
   }
 }
+
+@media (max-width: 900px) {
+  .application {
+    overflow: hidden;
+
+    .grid_application {
+      grid-template-columns: 13fr 0fr !important;
+    }
+    .application_container {
+      width: 100vw;
+    }
+    .application_container_shapes {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        height: 100px;
+      }
+    }
+  }
+}

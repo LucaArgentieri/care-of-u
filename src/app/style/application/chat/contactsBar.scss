@@ -1,10 +1,26 @@
 .contacts_bar {
   border-right: 1px solid rgba(0, 0, 0, 0.12);
 
+  img {
+    height: 30px;
+  }
+
   .MuiListItem-root {
     height: 50px;
   }
   .MuiList-padding {
     padding: 0px;
+  }
+}
+
+@media (min-width: 900px) {
+  .contacts_bar_mobile {
+    display: none;
+  }
+}
+
+@media (max-width: 900px) {
+  .contacts_bar {
+    display: none;
   }
 }
