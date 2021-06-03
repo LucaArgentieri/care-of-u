@@ -1,3 +1,29 @@
 .analisi {
   padding: 25px;
+
+  .title {
+    padding-bottom: 25px;
+  }
+
+  .card {
+    margin-bottom: 50px;
+
+    p {
+      padding-bottom: 10px;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .analisi_container {
+    .grid {
+      display: block;
+    }
+    padding: 5%;
+    padding-top: 0px;
+  }
+
+  .analisi {
+    padding: 0px;
+  }
 }

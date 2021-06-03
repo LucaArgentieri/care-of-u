@@ -81,19 +81,6 @@ export default function DashboardSidebar({ index }) {
               <ListItemText primary="Impostazioni" />
             </ListItem>
           </Link>
-
-          {/* <Link to="/application/notifications">
-            <ListItem
-              button
-              selected={selectedIndex === 4}
-              onClick={(event) => handleListItemClick(event, 4)}
-            >
-              <ListItemIcon>
-                <NotificationsActiveIcon />
-              </ListItemIcon>
-              <ListItemText primary="Notifiche" />
-            </ListItem>
-          </Link> */}
         </List>
       </div>
 

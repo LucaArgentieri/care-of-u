@@ -190,6 +190,11 @@
 }
 
 @media (max-width: 900px) {
+  .settings {
+    .grid {
+      display: block;
+    }
+  }
   .settings_container {
     padding: 0px;
     margin-bottom: 50px;
@@ -208,6 +213,7 @@
 
   .settings_container .settings_container_single span {
     width: 100%;
+    font-size: 18px;
   }
 
   .volume {

@@ -2,6 +2,7 @@
   position: relative;
   overflow-y: scroll;
   width: 100%;
+  height: 100vh;
 
   &_name {
     align-items: center;
@@ -70,5 +71,35 @@
 @media (max-width: 900px) {
   .chatroom_container {
     display: none;
+  }
+
+  .chatroom_container_form {
+    position: sticky;
+  }
+
+  .chatroom_container_mobile {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
+
+    .message_container {
+      margin: 0px;
+    }
+    .chatroom_container_form input {
+      width: 250px;
+    }
+
+    .message_container {
+      padding-top: 70px;
+      padding-bottom: 10px;
+    }
+
+    .chatroom_container_form {
+      padding-top: 20px;
+      padding-bottom: 80px;
+    }
   }
 }

@@ -3,6 +3,8 @@ import DashboardIcon from "@material-ui/icons/Dashboard";
 import ForumIcon from "@material-ui/icons/Forum";
 import AssessmentIcon from "@material-ui/icons/Assessment";
 import SettingsIcon from "@material-ui/icons/Settings";
+import app from "../../../firebase/firebase";
+import ExitToAppIcon from "@material-ui/icons/ExitToApp";
 
 import { Link } from "react-router-dom";
 
@@ -31,6 +33,9 @@ export default function MobileMenu(props) {
             className={props.status === "settings" ? "active" : ""}
           />
         </Link>
+        <button onClick={() => app.auth().signOut()}>
+          <ExitToAppIcon />
+        </button>
       </div>
     </div>
   );

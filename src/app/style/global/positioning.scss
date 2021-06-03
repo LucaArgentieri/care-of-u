@@ -7,6 +7,11 @@
     align-items: center;
   }
 
+  &_end {
+    justify-content: end;
+    align-items: center;
+  }
+
   &_column {
     flex-direction: column;
   }
@@ -45,4 +50,8 @@
 //display none
 .display-none {
   display: none;
+}
+
+.text-center {
+  text-align: center;
 }

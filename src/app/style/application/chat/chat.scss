@@ -4,7 +4,17 @@
     grid-template-columns: 2fr 3fr 7fr;
   }
 }
+.nodata {
+  p {
+    padding-bottom: 25px;
+  }
+}
 
-p {
-  padding-left: 5%;
+@media (max-width: 900px) {
+  .chat_container {
+    height: auto;
+    p {
+      padding-left: 5%;
+    }
+  }
 }

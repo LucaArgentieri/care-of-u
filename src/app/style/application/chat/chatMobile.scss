@@ -1,0 +1,21 @@
+@media (min-width: 900px) {
+  .chatMobile {
+    display: none;
+  }
+}
+
+@media (max-width: 900px) {
+  .chatMobile {
+    img {
+      height: 30px;
+    }
+    .MuiListItem-root {
+      height: 50px;
+      color: #e2824f;
+    }
+    .MuiList-padding {
+      padding: 0px;
+      padding-top: 50px;
+    }
+  }
+}

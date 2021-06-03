@@ -26,11 +26,11 @@ export default function RetrievePassword() {
     <div className="login_container full-height flex flex_center flex_column">
       <div className="flex flex_center">
         <Link to="/">
-          <h1 className="orange fs-72">Ü</h1>
+          <h1 className="c-primary  fs-72">Ü</h1>
         </Link>
       </div>
       <div className="title flex flex_center">
-        <h1 className="green fs-72">Retrieve password</h1>
+        <h1 className="c-secondary fs-72">Retrieve password</h1>
       </div>
 
       <div className={`landing_preview_shape_container`}>
