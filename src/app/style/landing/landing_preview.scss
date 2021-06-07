@@ -1,7 +1,12 @@
 .landing_preview {
+  height: 100vh;
   h2 {
     padding-bottom: 40px;
     padding-left: 150px;
+  }
+
+  p {
+    width: 30%;
   }
 
   .flex {
@@ -26,6 +31,14 @@
 
     img {
       z-index: 10;
+    }
+
+    .screen {
+      height: 60%;
+      margin-left: 50px;
+      margin-right: 50px;
+      box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2),
+        0px 3px 4px rgba(0, 0, 0, 0.12), 0px 2px 4px rgba(0, 0, 0, 0.14);
     }
 
     position: relative;
@@ -54,14 +67,20 @@
     padding-top: 100px;
     padding-right: 25px;
     padding-left: 25px;
-    padding-bottom: 100px;
+    margin-bottom: 250px;
+    height: auto;
     h2 {
       padding: 0px;
       font-size: 36px;
     }
     p {
+      width: 100%;
       padding-top: 25px;
       padding-bottom: 25px;
+    }
+    .screen {
+      margin: 0px;
+      margin-top: 100px;
     }
     .flex {
       flex-direction: column;
@@ -75,6 +94,11 @@
     }
     .landing_preview_shape_container .orange_shape_down {
       right: 0px;
+      top: 0px;
+    }
+    .landing_preview_shape_container .green_shape_down {
+      left: 0px;
+      top: 0px;
     }
   }
 }

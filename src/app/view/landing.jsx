@@ -10,6 +10,9 @@ import "../style/landing/landing.scss";
 import Shape from "../assets/green-shape.svg";
 import Img1 from "../assets/img1.png";
 import Img2 from "../assets/img2.png";
+import DashboardScreen from "../assets/dashboardscreen.jpg";
+import ChatScreen from "../assets/chatscreen.jpg";
+import AnalisiScreen from "../assets/analisiscreen.jpg";
 
 export default function Landing() {
   return (
@@ -23,13 +26,13 @@ export default function Landing() {
         }
       />
       <div className="shape flex flex_end">
-        <img src={Shape} alt="" />
         <span className="img1">
           <img src={Img1} alt="" />
         </span>
         <span className="img2">
           <img src={Img2} alt="" />
         </span>
+        <img className="shape" src={Shape} alt="" />
       </div>
       <LandingText
         orange={true}
@@ -46,14 +49,20 @@ export default function Landing() {
         green={true}
         title={"Dashboard"}
         id={`dashboard`}
-        text={"Ciao a tutti, Ciao ciao ciao a tuttiii ciao a tutti ciao ciao"}
+        text={
+          "Grazie alla dashboard potrai avere sempre sott’occhio la cartella clinica del paziente e tutti i dati, sia della persona che dello stato di salute"
+        }
+        img={DashboardScreen}
       />
       <LandingPreview
         right={false}
         green={false}
         title={"Chat"}
         id={"chat"}
-        text={"Ciao a tutti, Ciao ciao ciao a tuttiii ciao a tutti ciao ciao"}
+        text={
+          "La chat è configurata in modo da poter avere già nei contatti 3 dottori esperti nelle loro aree di competenza così da poter subito chiedere informazioni"
+        }
+        img={ChatScreen}
       />
       <LandingPreview
         right={true}
@@ -61,6 +70,7 @@ export default function Landing() {
         title={"Controllo analisi del paziente"}
         id={"analisi"}
         text={"Ciao a tutti, Ciao ciao ciao a tuttiii ciao a tutti ciao ciao"}
+        img={AnalisiScreen}
       />
       <Partners />
       <CallToAction />

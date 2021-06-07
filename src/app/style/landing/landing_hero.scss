@@ -26,6 +26,8 @@
     video {
       display: flex;
       justify-content: center;
+      min-width: 100%;
+      min-height: 100%;
     }
 
     button {

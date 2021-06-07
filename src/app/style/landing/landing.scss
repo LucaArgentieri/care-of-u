@@ -3,16 +3,17 @@
     display: flex;
     justify-content: flex-end;
     position: relative;
+
     img {
       margin-right: -100px;
-      margin-top: -30%;
+      margin-top: -25%;
     }
 
     .img1 {
       position: absolute;
       z-index: 999;
       width: 100%;
-      top: 20%;
+      top: 80%;
       left: 70%;
       img {
         height: 600px;
@@ -22,9 +23,9 @@
     .img2 {
       position: absolute;
       z-index: 998;
-      width: 100%;
-      top: 50%;
-      left: 40%;
+      width: 40%;
+      top: -30%;
+      left: 50%;
       img {
         height: auto;
       }
@@ -37,15 +38,30 @@
     .shape {
       display: flex;
       justify-content: center;
+      flex-direction: column;
       img {
         margin: 0px;
       }
+      .shape {
+        margin-top: -300px;
+      }
       .img1 {
-        display: none;
+        position: static;
+
+        img {
+          height: auto;
+        }
       }
       .img2 {
-        position: static;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        z-index: 999;
+        height: 200px;
       }
+    }
+    .text {
+      height: auto;
     }
   }
 }

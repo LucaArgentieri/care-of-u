@@ -17,7 +17,7 @@ export default function Settings() {
           ) : (
             <span className="flex flex_center">
               <Link
-                className="fs-48 text-center c-primary spectral medium"
+                className="fs-48 text-center c-primary spectral bold"
                 to="/"
               >
                 Ü

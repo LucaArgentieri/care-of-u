@@ -3,9 +3,9 @@ import "../../style/landing/landing_preview.scss";
 import OrangeShape from "../../assets/orange-shape.svg";
 import GreenShape from "../../assets/green-shape.svg";
 
-export default function LandingPreview({ right, green, title, text, id }) {
+export default function LandingPreview({ right, green, title, text, id, img }) {
   return (
-    <div id={id} className={`full-height landing_preview`}>
+    <div id={id} className={`landing_preview`}>
       <h2 className={`fs-64 ${green ? "c-secondary" : "c-primary"}`}>
         {title}
       </h2>
@@ -17,7 +17,7 @@ export default function LandingPreview({ right, green, title, text, id }) {
             !right ? "landing_preview_shape_container_reverse" : ""
           }`}
         >
-          <img src={!right ? OrangeShape : GreenShape} alt="" />
+          <img className="screen" src={img} alt="" />
           {!green ? (
             <img className="green_shape_down" src={GreenShape} alt="" />
           ) : (

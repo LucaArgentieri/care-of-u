@@ -9,14 +9,42 @@
     padding-bottom: 25px;
   }
 
-  .card {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin-right: 25px;
-    margin-bottom: 25px;
-    padding: 50px;
+  .Cell-highlightedText-24 {
+    color: #2d936c;
+  }
+
+  .makeStyles-appointment-90 {
+    background-color: #e2824f;
+
+    &:hover {
+      background-color: #2d936c;
+    }
+  }
+}
+
+@media (min-width: 900px) {
+  .dashboard_container {
+    .card {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      margin-bottom: 25px;
+      margin-right: 1%;
+      width: 49%;
+
+      p {
+        color: #e2824f;
+      }
+
+      .line {
+        padding: 50px;
+        canvas {
+          height: 200px;
+          width: auto;
+        }
+      }
+    }
   }
 }
 
@@ -41,6 +69,10 @@
       }
 
       .card {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
         padding: 0px;
         margin: 10px;
       }
