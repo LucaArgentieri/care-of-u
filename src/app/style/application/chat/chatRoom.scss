@@ -75,6 +75,9 @@
 
   .chatroom_container_form {
     position: sticky;
+    overflow: hidden;
+    bottom: 0;
+    left: 0;
   }
 
   .chatroom_container_mobile {

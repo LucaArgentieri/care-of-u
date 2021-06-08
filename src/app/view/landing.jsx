@@ -10,6 +10,7 @@ import "../style/landing/landing.scss";
 import Shape from "../assets/green-shape.svg";
 import Img1 from "../assets/img1.png";
 import Img2 from "../assets/img2.png";
+import Img3 from "../assets/ticketimg.png";
 import DashboardScreen from "../assets/dashboardscreen.jpg";
 import ChatScreen from "../assets/chatscreen.jpg";
 import AnalisiScreen from "../assets/analisiscreen.jpg";
@@ -43,6 +44,9 @@ export default function Landing() {
       />
       <div className="shape flex flex_end">
         <img src={Shape} alt="" />
+        <span className="img3">
+          <img src={Img3} alt="" />
+        </span>
       </div>
       <LandingPreview
         right={true}
@@ -69,7 +73,9 @@ export default function Landing() {
         green={true}
         title={"Controllo analisi del paziente"}
         id={"analisi"}
-        text={"Ciao a tutti, Ciao ciao ciao a tuttiii ciao a tutti ciao ciao"}
+        text={
+          "La sezione analisi del paziente permette di visualizzare tutti gli esami fatti dal paziente con relativi esiti e commenti del medico specializzato."
+        }
         img={AnalisiScreen}
       />
       <Partners />

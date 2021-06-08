@@ -18,7 +18,7 @@ export default function LandingHero() {
       setIsMobile(false);
     }
     window.addEventListener("resize", (evt) => {
-      if (window.innerWidth <= 900) {
+      if (window.innerWidth < 900) {
         setIsMobile(true);
       } else {
         setIsMobile(false);

@@ -30,6 +30,17 @@
         height: auto;
       }
     }
+
+    .img3 {
+      position: absolute;
+      z-index: 998;
+      width: 40%;
+      top: -100%;
+      left: 50%;
+      img {
+        height: auto;
+      }
+    }
   }
 }
 
@@ -58,6 +69,13 @@
         left: 0;
         z-index: 999;
         height: 200px;
+      }
+
+      .img3 {
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        width: 100%;
       }
     }
     .text {
