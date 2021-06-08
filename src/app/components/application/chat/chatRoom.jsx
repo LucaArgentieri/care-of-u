@@ -66,6 +66,7 @@ export default function ChatRoom({ index }) {
         <div className="chatroom_container bg-primaryOpacity">
           <div className="chatroom_container_name bg-secondary flex c-white fs-18">
             <img
+              alt="avatar"
               src={
                 "https://clubsports.gcu.edu/wp-content/uploads/Coach-Avator.png"
               }
@@ -102,6 +103,7 @@ export default function ChatRoom({ index }) {
               <ArrowBackIosIcon />
             </span>
             <img
+              alt="avatar"
               src={
                 "https://clubsports.gcu.edu/wp-content/uploads/Coach-Avator.png"
               }

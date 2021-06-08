@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import MobileMenu from "../mobileMenu/mobileMenu";
 
 import Card from "@material-ui/core/Card";
@@ -19,10 +19,12 @@ import "../../../style/application/dashboard/dashboard.scss";
 export default function SimpleCard() {
   const localData = localStorage.getItem("code");
 
-  let date;
+  const [data, setData] = useState({});
+
   useEffect(() => {
-    date = new Date().toLocaleString("it-IT", { day: "numeric" });
-  }, []);
+    setData({data: new Date().toLocaleString("it-IT", { day: "numeric" })})
+  }, [])
+
   return (
     <div className="dashboard">
       <SideBar index={0} />
@@ -95,7 +97,7 @@ export default function SimpleCard() {
           <p className="c-secondary fs-48 lato medium">Calendario paziente</p>
           <Card>
             <Scheduler data={schedulerData}>
-              <ViewState currentDate={date} />
+              <ViewState currentDate={data} />
               <DayView startDayHour={9} endDayHour={18} />
               <Appointments />
             </Scheduler>

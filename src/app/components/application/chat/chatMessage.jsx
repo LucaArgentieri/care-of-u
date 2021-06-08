@@ -11,6 +11,7 @@ export default function ChatMessage(props) {
     <div className="message_container">
       <div className={`message ${messageClass}`}>
         <img
+          alt="avatar"
           src={
             photoURL ||
             "https://clubsports.gcu.edu/wp-content/uploads/Coach-Avator.png"

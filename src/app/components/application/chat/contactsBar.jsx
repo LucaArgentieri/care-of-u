@@ -23,6 +23,7 @@ export default function ContactsBar({ index }) {
             >
               <ListItemIcon>
                 <img
+                  alt="avatar"
                   src={
                     "https://clubsports.gcu.edu/wp-content/uploads/Coach-Avator.png"
                   }
@@ -38,6 +39,7 @@ export default function ContactsBar({ index }) {
               <ListItemIcon>
                 {" "}
                 <img
+                  alt="avatar"
                   src={
                     "https://clubsports.gcu.edu/wp-content/uploads/Coach-Avator.png"
                   }
@@ -53,6 +55,7 @@ export default function ContactsBar({ index }) {
               <ListItemIcon>
                 {" "}
                 <img
+                  alt="avatar"
                   src={
                     "https://clubsports.gcu.edu/wp-content/uploads/Coach-Avator.png"
                   }

@@ -22,10 +22,7 @@ export default function ChatMobile() {
           ""
         ) : (
           <span className="flex flex_center">
-            <Link
-              className="fs-48 text-center c-primary spectral bold"
-              to="/"
-            >
+            <Link className="fs-48 text-center c-primary spectral bold" to="/">
               Ü
             </Link>
           </span>
@@ -40,6 +37,7 @@ export default function ChatMobile() {
           >
             <ListItemIcon>
               <img
+                alt="avatar"
                 src={
                   "https://clubsports.gcu.edu/wp-content/uploads/Coach-Avator.png"
                 }
@@ -55,6 +53,7 @@ export default function ChatMobile() {
             <ListItemIcon>
               {" "}
               <img
+                alt="avatar"
                 src={
                   "https://clubsports.gcu.edu/wp-content/uploads/Coach-Avator.png"
                 }
@@ -70,6 +69,7 @@ export default function ChatMobile() {
             <ListItemIcon>
               {" "}
               <img
+                alt="avatar"
                 src={
                   "https://clubsports.gcu.edu/wp-content/uploads/Coach-Avator.png"
                 }

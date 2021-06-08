@@ -65,7 +65,7 @@ export default function Settings() {
                   <option disabled defaultValue="1">
                     Piccola
                   </option>
-                  <option defaultValue defaultValue="2">
+                  <option defaultValue="2">
                     Media
                   </option>
                   <option disabled defaultValue="2">

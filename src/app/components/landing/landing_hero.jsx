@@ -24,7 +24,7 @@ export default function LandingHero() {
         setIsMobile(false);
       }
     });
-  }, [isMobile]);
+  }, []);
 
   const moveToText = () => {
     gsap.to(window, {
