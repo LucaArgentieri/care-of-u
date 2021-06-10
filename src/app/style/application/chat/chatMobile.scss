@@ -6,12 +6,16 @@
 
 @media (max-width: 900px) {
   .chatMobile {
+    a {
+      padding-top: 25px;
+    }
     img {
       height: 30px;
     }
     .MuiListItem-root {
       height: 50px;
-      color: #e2824f;
+      color: white;
+      background-color: rgba(45, 147, 108, 0.5);
     }
     .MuiList-padding {
       padding: 0px;

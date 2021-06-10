@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext } from "react";
 import "../../style/landing/landing_hero.scss";
 import { AuthContext } from "../../firebase/auth";
 import { Link } from "react-router-dom";
@@ -9,23 +9,6 @@ import Video from "../../assets/video.mp4";
 gsap.registerPlugin(ScrollToPlugin);
 
 export default function LandingHero() {
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    if (window.innerWidth <= 900) {
-      setIsMobile(true);
-    } else {
-      setIsMobile(false);
-    }
-    window.addEventListener("resize", (evt) => {
-      if (window.innerWidth < 900) {
-        setIsMobile(true);
-      } else {
-        setIsMobile(false);
-      }
-    });
-  }, []);
-
   const moveToText = () => {
     gsap.to(window, {
       scrollTo: ".landing_text",
@@ -36,46 +19,76 @@ export default function LandingHero() {
   const { currentUser } = useContext(AuthContext);
 
   return (
-    <div className="hero">
-      <div className="video-container full-height">
-        <div className="shape_container">
-          <div className="orange_filter bg-secondary"></div>
+    <>
+      <div className="hero">
+        <div className="video-container full-height">
+          <div className="shape_container">
+            <div className="orange_filter bg-secondary"></div>
 
-          <video autoPlay loop muted>
-            <source src={Video} type="video/mp4" />
-          </video>
-          <h1
-            className={`title c-white spectral extrabold ${
-              isMobile ? "fs-48" : "fs-72"
-            }`}
-          >
-            Care of <span className="c-primary spectral">Ü</span>
-          </h1>
-          <Link to="/signup">
-            <button className="btn_cta bg-primary c-white fs-14">
-              {isMobile ? (
+            <video autoPlay loop muted>
+              <source src={Video} type="video/mp4" />
+            </video>
+            <h1 className="title c-white spectral extrabold fs-72">
+              Care of <span className="c-primary spectral">Ü</span>
+            </h1>
+            <Link to="/signup">
+              <button className="btn_cta bg-primary c-white fs-14">
                 <FaceIcon />
-              ) : currentUser ? (
-                "Dashboard"
-              ) : (
-                "Sign Up / Login"
-              )}
-            </button>
-          </Link>
+                {currentUser ? (
+                  <p>Entra nell'app</p>
+                ) : (
+                  <p>Registrati / Accedi</p>
+                )}
+              </button>
+            </Link>
+          </div>
+        </div>
+        <div className="text_container flex flex_center flex_column">
+          <h1 className={`c-white regular fs-96`}>
+            Take care of{" "}
+            <span className="spectral bold c-primary">important</span> people
+          </h1>
+          <button
+            className="btn_cta bg-primary c-white fs-14"
+            onClick={moveToText}
+          >
+            Scopri di più
+          </button>
         </div>
       </div>
-      <div className="text_container flex flex_center flex_column">
-        <h1 className={`c-white regular ${isMobile ? "fs-48" : "fs-96"}`}>
-          Take care of{" "}
-          <span className="spectral bold c-primary">important</span> people
-        </h1>
-        <button
-          className="btn_cta bg-primary c-white fs-14"
-          onClick={moveToText}
-        >
-          How it works?
-        </button>
+      {/* Mobile */}
+      <div className="hero_mobile">
+        <div className="video-container full-height">
+          <div className="shape_container">
+            <div className="orange_filter bg-secondary"></div>
+
+            <video autoPlay loop muted>
+              <source src={Video} type="video/mp4" />
+            </video>
+            <h1 className="title c-white spectral extrabold fs-48">
+              Care of <span className="c-primary spectral">Ü</span>
+            </h1>
+            <Link to="/signup">
+              <button className="btn_cta bg-primary c-white fs-14">
+                <FaceIcon />
+              </button>
+            </Link>
+          </div>
+        </div>
+        <div className="text_container flex flex_center flex_column">
+          <h1 className="c-white regular fs-48">
+            Take care of{" "}
+            <span className="spectral bold c-primary">important</span> people
+          </h1>
+          <button
+            className="btn_cta bg-primary c-white fs-14"
+            onClick={moveToText}
+          >
+            Scopri di più
+          </button>
+        </div>
       </div>
-    </div>
+      ;
+    </>
   );
 }

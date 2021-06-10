@@ -22,8 +22,8 @@ export default function SimpleCard() {
   const [data, setData] = useState({});
 
   useEffect(() => {
-    setData({data: new Date().toLocaleString("it-IT", { day: "numeric" })})
-  }, [])
+    setData({ data: new Date().toLocaleString("it-IT", { day: "numeric" }) });
+  }, []);
 
   return (
     <div className="dashboard">
@@ -46,17 +46,8 @@ export default function SimpleCard() {
           <p className="c-secondary fs-48 lato medium">Dashboard</p>
           <div className="container flex flex_wrap">
             <Card className="card">
-              <CardContent className="line">
-                <Line
-                  label="Temperatura"
-                  data={[34, 35, 36, 37.5, 37, 36.5]}
-                  reverse={false}
-                  time={["10:30", "11:00", "12:30", "13:00", "13:30", "14"]}
-                />
-              </CardContent>
-            </Card>
-            <Card className="card">
               <CardContent>
+                <p className="fs-36 lato medium">Dati anagrafici</p>
                 <p className="fs-24">
                   Paziente: {codeData[0].data1.nome} {codeData[0].data1.cognome}
                 </p>
@@ -70,6 +61,17 @@ export default function SimpleCard() {
                 </p>
               </CardContent>
             </Card>
+            <Card className="card">
+              <CardContent className="line">
+                <Line
+                  label="Temperatura"
+                  data={[34, 35, 36, 37.5, 37, 36.5]}
+                  reverse={false}
+                  time={["10:30", "11:00", "12:30", "13:00", "13:30", "14"]}
+                />
+              </CardContent>
+            </Card>
+
             <Card className="card">
               <CardContent className="line">
                 <Line
@@ -90,8 +92,6 @@ export default function SimpleCard() {
                 />
               </CardContent>
             </Card>
-
-
           </div>
 
           <p className="c-secondary fs-48 lato medium">Calendario paziente</p>

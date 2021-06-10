@@ -28,10 +28,19 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      flex-direction: column;
       margin-bottom: 25px;
       margin-right: 1%;
       width: 49%;
+
+      .card_img {
+        img {
+          height: 70px;
+        }
+      }
+
+      .fs-36 {
+        color: #2d936c;
+      }
 
       p {
         color: #e2824f;
@@ -41,7 +50,6 @@
         padding: 50px;
         canvas {
           height: 200px;
-          width: auto;
         }
       }
     }
@@ -55,6 +63,10 @@
 
     .dashboard_container {
       padding: 0px;
+
+      a {
+        padding-top: 25px;
+      }
 
       .container {
         display: flex;
@@ -75,6 +87,19 @@
         flex-direction: column;
         padding: 0px;
         margin: 10px;
+
+        .fs-36 {
+          color: #2d936c;
+        }
+
+        p {
+          color: #e2824f;
+        }
+      }
+      .line {
+        canvas {
+          height: auto;
+        }
       }
     }
   }
