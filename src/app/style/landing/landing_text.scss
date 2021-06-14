@@ -11,13 +11,39 @@
   padding: 0px 150px 0px 150px;
 }
 
+.shape {
+  position: relative;
+  .img1 {
+    img {
+      position: absolute;
+      bottom: 0;
+      left: 25%;
+      height: 50%;
+      z-index: 10;
+    }
+  }
+  .img2 {
+    img {
+      position: absolute;
+      bottom: 50%;
+      left: 0;
+      height: 50%;
+      z-index: 10;
+    }
+  }
+}
+
 @media (max-width: 900px) {
+  .flex {
+    flex-direction: column;
+  }
   .landing_text {
     padding: 0px;
     padding-right: 25px;
     padding-left: 25px;
     width: 100%;
     height: auto;
+
     h1 {
       font-size: 36px;
     }

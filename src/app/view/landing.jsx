@@ -7,7 +7,6 @@ import CallToAction from "../components/landing/calltoaction";
 import Footer from "../components/landing/footer";
 import "../style/landing/landing.scss";
 
-import Shape from "../assets/green-shape.svg";
 import Img1 from "../assets/img1.png";
 import Img2 from "../assets/img2.png";
 import Img3 from "../assets/ticketimg.png";
@@ -25,29 +24,19 @@ export default function Landing() {
         text={
           "Care of u è un servizio nato dall'esigenza di voler facilitare la comunicazione tra ospedale e famigliari oppure amici del paziente. Stiamo lavorando per rendere questo servizio sempre più scalabile ed utilizzabile anche come servizio di comunicazione per vaccini, visite ed altre operazioni."
         }
+        img1={Img1}
+        img2={Img2}
+        shape={true}
       />
-      <div className="shape flex flex_end">
-        <span className="img1">
-          <img src={Img1} alt="" />
-        </span>
-        <span className="img2">
-          <img src={Img2} alt="" />
-        </span>
-        <img className="shape" src={Shape} alt="" />
-      </div>
       <LandingText
         orange={true}
         title={"Come funziona?"}
         text={
           "Per abilitare Care of Ü, l’utente necessita di un codice utente che viene fornito dalla struttura sanitaria che ospita il paziente. Una volta effettutato l’accesso alla piattaforma, inserisci il codice ed avrai a disposizione tutte le funzionalità dell’app."
         }
+        img3={Img3}
+        shape={false}
       />
-      <div className="shape flex flex_end">
-        <img src={Shape} alt="" />
-        <span className="img3">
-          <img src={Img3} alt="" />
-        </span>
-      </div>
       <LandingPreview
         right={true}
         green={true}
