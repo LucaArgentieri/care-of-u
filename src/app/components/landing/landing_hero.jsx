@@ -3,9 +3,9 @@ import "../../style/landing/landing_hero.scss";
 import { AuthContext } from "../../firebase/auth";
 import { Link } from "react-router-dom";
 import { gsap } from "gsap";
-import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import FaceIcon from "@material-ui/icons/Face";
 import Video from "../../assets/video.mp4";
+import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 gsap.registerPlugin(ScrollToPlugin);
 
 export default function LandingHero() {
