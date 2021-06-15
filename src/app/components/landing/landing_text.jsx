@@ -17,7 +17,11 @@ export default function LandingText({
     <div className="landing_flex flex">
       <div className="landing_text flex flex_center flex_column">
         <div className="landing_text_container">
-          <h1 className={`${orange ? "c-primary" : "c-secondary"} fs-72`}>
+          <h1
+            className={`${
+              orange ? "c-primary" : "c-secondary"
+            } spectral medium fs-72`}
+          >
             {title}
           </h1>
           <p className="fs-24">{text}</p>

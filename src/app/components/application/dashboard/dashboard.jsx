@@ -105,12 +105,24 @@ export default function SimpleCard() {
         </div>
       ) : (
         <div className="nodata flex flex_center flex_column half-height">
+          {window.innerWidth > 900 ? (
+            ""
+          ) : (
+            <span className="flex flex_center">
+              <Link
+                className="fs-48 text-center c-primary spectral bold"
+                to="/"
+              >
+                Ü
+              </Link>
+            </span>
+          )}
           <p className="fs-24">Dati non disponibili</p>
           <p className="fs-24">
             Inserisci i dati forniti nella struttura ospedaliera
           </p>
-          <Link className="btn_cta bg-primary" to="/application">
-            Inserisci i dati
+          <Link className="btn_cta bg-primary fs-24 c-white" to="/application">
+            <p>Inserisci i dati</p>
           </Link>
         </div>
       )}

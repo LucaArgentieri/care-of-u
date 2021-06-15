@@ -28,11 +28,11 @@ export default function LandingHero() {
             <video autoPlay loop muted>
               <source src={Video} type="video/mp4" />
             </video>
-            <h1 className="title c-white spectral extrabold fs-72">
-              Care of <span className="c-primary spectral">Ü</span>
+            <h1 className="title c-white spectral  fs-72">
+              Care of <span className="c-primary spectral bold ">Ü</span>
             </h1>
             <Link to="/signup">
-              <button className="btn_cta bg-primary c-white fs-14">
+              <button className="btn_cta bg-primary c-white fs-24">
                 <FaceIcon />
                 {currentUser ? (
                   <p>Entra nell'app</p>
@@ -44,15 +44,15 @@ export default function LandingHero() {
           </div>
         </div>
         <div className="text_container flex flex_center flex_column">
-          <h1 className={`c-white regular fs-96`}>
+          <h1 className={`c-white  fs-96`}>
             Take care of{" "}
             <span className="spectral bold c-primary">important</span> people
           </h1>
           <button
-            className="btn_cta bg-primary c-white fs-14"
+            className="btn_cta bg-primary c-white fs-24"
             onClick={moveToText}
           >
-            Scopri di più
+            <p>Scopri di più</p>
           </button>
         </div>
       </div>
@@ -81,10 +81,10 @@ export default function LandingHero() {
             <span className="spectral bold c-primary">important</span> people
           </h1>
           <button
-            className="btn_cta bg-primary c-white fs-14"
+            className="btn_cta bg-primary c-white fs-24"
             onClick={moveToText}
           >
-            Scopri di più
+            <p>Scopri di più</p>
           </button>
         </div>
       </div>

@@ -86,10 +86,10 @@ export default function DashboardSidebar({ index }) {
 
       <div className="signOut_container">
         <button
-          className="btn_cta bg-primary fs-14"
+          className="btn_cta bg-primary fs-24 c-white"
           onClick={() => app.auth().signOut()}
         >
-          Sign out
+          <p>Sign out</p>
         </button>
       </div>
     </div>

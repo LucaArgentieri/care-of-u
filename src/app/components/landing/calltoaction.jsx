@@ -11,7 +11,9 @@ export default function CallToAction() {
         </p>
 
         <Link to="/signup">
-          <button className="btn_cta bg-primary">Registrati</button>
+          <button className="btn_cta c-white fs-24 bg-primary">
+            <p>Registrati</p>
+          </button>
         </Link>
       </div>
       <div className="last-container">

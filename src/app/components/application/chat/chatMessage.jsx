@@ -17,7 +17,7 @@ export default function ChatMessage(props) {
             "https://clubsports.gcu.edu/wp-content/uploads/Coach-Avator.png"
           }
         />
-        <p className="c-white fs-18">{text}</p>
+        <p className="c-white medium fs-18">{text}</p>
       </div>
     </div>
   );

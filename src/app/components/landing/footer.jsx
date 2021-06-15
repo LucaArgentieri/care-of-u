@@ -31,8 +31,10 @@ export default function Footer() {
     <footer className="bg-primary">
       <div className="footer_container grid">
         <div className="footer_logo flex flex_center flex_column">
-          <h1 className="c-white fs-64">Ü</h1>
-          <p className="c-white fs-18">Take care of the important people</p>
+          <h1 className="c-white spectral regular fs-64">Ü</h1>
+          <p className="c-white spectral fs-18">
+            Take care of the important people
+          </p>
         </div>
         <div className="footer_menu flex flex_column">
           <span onClick={moveToDashboard} className="c-white fs-18">

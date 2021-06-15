@@ -36,15 +36,18 @@ export default function Application() {
               action=""
             >
               <label className="fs-36 medium spectral c-primary" htmlFor="">
-                Insert your code here:
+                Inserisci il tuo codice:
               </label>
               <input
                 type="text"
                 value={value}
                 onChange={(e) => setValue(e.target.value)}
               />
-              <button className="btn_cta bg-secondary" type="submit">
-                Submit
+              <button
+                className="btn_cta bg-secondary c-white fs-24"
+                type="submit"
+              >
+                <p>Invia</p>
               </button>
             </form>
           )}
