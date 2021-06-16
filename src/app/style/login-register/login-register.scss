@@ -1,4 +1,5 @@
 .login_container {
+  z-index: 999;
   overflow: hidden;
   h1 {
     padding-bottom: 10px;
@@ -107,6 +108,8 @@
       left: 80%;
     }
     .green-shape {
+      z-index: -1;
+
       left: -10%;
       top: -50%;
     }
