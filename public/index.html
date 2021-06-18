@@ -8,10 +8,6 @@
     <meta name="description" content="Take care of important people" />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-    />
 
     <title>Ü | Take care of the important people</title>
   </head>
@@ -24,12 +20,13 @@
         window.addEventListener("load", () => {
           navigator.serviceWorker
             .register("./serviceworker.js")
-            .then((reg) => console.log("Success: ", reg.scope))
+            .then((reg) => console.log(""))
             .catch((err) => console.log("Failure: ", err));
         });
       }
     </script>
     <script
+      rel="preconnect"
       type="text/javascript"
       src="https://www.gstatic.com/charts/loader.js"
     ></script>

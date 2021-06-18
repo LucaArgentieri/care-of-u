@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { gsap } from "gsap";
 import FaceIcon from "@material-ui/icons/Face";
 import Video from "../../assets/video.mp4";
+import VideoFrame from "../../assets/videoframe.png";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 gsap.registerPlugin(ScrollToPlugin);
 
@@ -25,7 +26,7 @@ export default function LandingHero() {
           <div className="shape_container">
             <div className="orange_filter bg-secondary"></div>
 
-            <video autoPlay loop muted>
+            <video autoPlay loop muted poster={VideoFrame}>
               <source src={Video} type="video/mp4" />
             </video>
             <h1 className="title c-white spectral  fs-72">
@@ -62,15 +63,20 @@ export default function LandingHero() {
           <div className="shape_container">
             <div className="orange_filter bg-secondary"></div>
 
-            <video autoPlay loop muted>
+            <video autoPlay loop muted poster={VideoFrame}>
               <source src={Video} type="video/mp4" />
             </video>
             <h1 className="title c-white spectral extrabold fs-48">
-              Care of <span className="c-primary spectral">Ü</span>
+              <span className="c-primary spectral">Ü</span>
             </h1>
-            <Link to="/signup">
+            <Link to="/signup" name="home_button">
               <button className="btn_cta bg-primary c-white fs-14">
                 <FaceIcon />
+                {currentUser ? (
+                  <p>&nbsp; Entra nell'app</p>
+                ) : (
+                  <p>&nbsp; Registrati / Accedi</p>
+                )}
               </button>
             </Link>
           </div>
