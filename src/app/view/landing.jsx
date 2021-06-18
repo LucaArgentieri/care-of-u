@@ -10,9 +10,9 @@ import "../style/landing/landing.scss";
 import Img1 from "../assets/img1.png";
 import Img2 from "../assets/img2.png";
 import Img3 from "../assets/ticketimg.png";
-import DashboardScreen from "../assets/dashboardscreen.jpg";
-import ChatScreen from "../assets/chatscreen.jpg";
-import AnalisiScreen from "../assets/analisiscreen.jpg";
+import DashboardScreen from "../assets/dashboardscreen.png";
+import ChatScreen from "../assets/chatscreen.png";
+import AnalisiScreen from "../assets/analisiscreen.png";
 
 export default function Landing() {
   return (

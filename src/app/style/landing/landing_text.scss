@@ -36,6 +36,15 @@
 @media (max-width: 900px) {
   .landing_flex {
     flex-direction: column;
+
+    .shape {
+      .img1 {
+        img {
+          height: 100%;
+          bottom: -20%;
+        }
+      }
+    }
   }
   .landing_text {
     padding: 0px;
