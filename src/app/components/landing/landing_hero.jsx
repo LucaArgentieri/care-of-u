@@ -94,7 +94,6 @@ export default function LandingHero() {
           </button>
         </div>
       </div>
-      ;
     </>
   );
 }
